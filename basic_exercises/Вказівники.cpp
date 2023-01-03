@@ -46,7 +46,7 @@ int main()
 
 /*2) Используя указатели и оператор разыменования, 
 обменять местами значения двух переменных.*/
-    /*cout << "Task 1.1" << endl;    // варіан 1
+    cout << "Task 1.1" << endl;    // варіан 1
     int a, b;
     int* pa,* pb;
     pa = &a;
@@ -54,7 +54,7 @@ int main()
     cout << "Enter first number (A) - "; cin >> a;
     cout << "Enter second number (B) - "; cin >> b;
     Swap(pa, pb);
-    cout << "A - " << a << "\nB - " << b << endl;*/
+    cout << "A - " << a << "\nB - " << b << endl;
 
     /*cout << "Task 1.2" << endl;     // варіан 2
     int a, b, temp;
@@ -70,7 +70,7 @@ int main()
 /*3) Написать примитивный калькулятор, пользуясь только 
 указателями и оператором разыменования.*/
 
-    /*cout << "Task 2\n\tCalculator" << endl;
+    cout << "Task 2\n\tCalculator" << endl;
     int exit;
     float n1, n2;
     char operation;
@@ -88,5 +88,5 @@ int main()
         cin >> exit;
         if (exit == 2) { break; }
         system("cls");
-    } while (exit != 2);*/
+    } while (exit != 2);
 }
