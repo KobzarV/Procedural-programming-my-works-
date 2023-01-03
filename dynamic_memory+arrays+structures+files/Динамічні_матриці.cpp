@@ -82,43 +82,45 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    /*cout << "Task #1" << endl;
-    //1) Íàïèñàòü ôóíêöèþ, äîáàâëÿþùóþ ñòðîêó äâóìåðíîìó äèíàìè÷åñêîìó ìàññèâó â êîíåö.
+    
+    //1) ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑŽ, Ð´Ð¾Ð±Ð°Ð²Ð»ÑÑŽÑ‰ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ð¾Ð¼Ñƒ Ð´Ð¸Ð½Ð°Ð¼Ð¸Ñ‡ÐµÑÐºÐ¾Ð¼Ñƒ Ð¼Ð°ÑÑÐ¸Ð²Ñƒ Ð² ÐºÐ¾Ð½ÐµÑ†.
+    cout << "Task #1" << endl;
     int row, col;
-    cout << "Ââåä³òü ðîçì³ðè ìàñèâó" << endl;
-    cout << "Ðÿäêè - "; cin >> row;
-    cout << "Ñòîâïö³ - "; cin >> col;
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ€Ð¾Ð·Ð¼Ñ–Ñ€Ð¸ Ð¼Ð°ÑÐ¸Ð²Ñƒ" << endl;
+    cout << "Ð ÑÐ´ÐºÐ¸ - "; cin >> row;
+    cout << "Ð¡Ñ‚Ð¾Ð²Ð¿Ñ†Ñ– - "; cin >> col;
     int** mas = new int* [row];
     srand(time(0));
     for (int i = 0; i < row; i++)
     {
         mas[i] = new int[col];
     }
-    cout << "\nÌàñèâ" << endl;
+    cout << "\nÐœÐ°ÑÐ¸Ð²" << endl;
     ArrInit(mas, row, col);
     ShowArr(mas, row, col);
     AddRow(mas, row, col);
-    cout << "\nÍîâèé ìàñèâ" << endl;
+    cout << "\nÐÐ¾Ð²Ð¸Ð¹ Ð¼Ð°ÑÐ¸Ð²" << endl;
     ShowArr(mas, row, col);
-    Del(mas, row, col);*/
+    Del(mas, row, col);
 
+    
+    //ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑŽ, Ð´Ð¾Ð±Ð°Ð²Ð»ÑÑŽÑ‰ÑƒÑŽ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ðº Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ð¾Ð¼Ñƒ Ð´Ð¸Ð½Ð°Ð¼Ð¸Ñ‡ÐµÑÐºÐ¾Ð¼Ñƒ Ð¼Ð°ÑÑÐ¸Ð²Ñƒ Ð²Ð¿Ñ€Ð°Ð²Ð¾
     cout << "Task #2" << endl;
-    //Íàïèñàòü ôóíêöèþ, äîáàâëÿþùóþ ñòîëáåö ê äâóìåðíîìó äèíàìè÷åñêîìó ìàññèâó âïðàâî
     int row, col;
-    cout << "Ââåä³òü ðîçì³ðè ìàñèâó" << endl;
-    cout << "Ðÿäêè - "; cin >> row;
-    cout << "Ñòîâïö³ - "; cin >> col;
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ€Ð¾Ð·Ð¼Ñ–Ñ€Ð¸ Ð¼Ð°ÑÐ¸Ð²Ñƒ" << endl;
+    cout << "Ð ÑÐ´ÐºÐ¸ - "; cin >> row;
+    cout << "Ð¡Ñ‚Ð¾Ð²Ð¿Ñ†Ñ– - "; cin >> col;
     int** arr = new int* [row];
     srand(time(0));
     for (int i = 0; i < row; i++)
     {
         arr[i] = new int[col];
     }
-    cout << "\nÌàñèâ" << endl;
+    cout << "\nÐœÐ°ÑÐ¸Ð²" << endl;
     ArrInit(arr, row, col);
     ShowArr(arr, row, col);
     AddCol(arr, row, col);
-    cout << "\nÍîâèé ìàñèâ" << endl;
+    cout << "\nÐÐ¾Ð²Ð¸Ð¹ Ð¼Ð°ÑÐ¸Ð²" << endl;
     ShowArr(arr, row, col);
     Del(arr, row, col);
 }
