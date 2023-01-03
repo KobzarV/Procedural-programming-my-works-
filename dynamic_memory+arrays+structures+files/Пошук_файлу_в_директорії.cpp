@@ -4,27 +4,27 @@
 
 using namespace std;
 
-/*Привести простой пример кода для поиска файла в директории*/
+/*РџСЂРёРІРµСЃС‚Рё РїСЂРѕСЃС‚РѕР№ РїСЂРёРјРµСЂ РєРѕРґР° РґР»СЏ РїРѕРёСЃРєР° С„Р°Р№Р»Р° РІ РґРёСЂРµРєС‚РѕСЂРёРё*/
 
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	//пошук першого файлу у папці, де знаходиться сама програма
-	/*struct _finddata_t myfileinfo;
+	//РїРѕС€СѓРє РїРµСЂС€РѕРіРѕ С„Р°Р№Р»Сѓ Сѓ РїР°РїС†С–, РґРµ Р·РЅР°С…РѕРґРёС‚СЊСЃСЏ СЃР°РјР° РїСЂРѕРіСЂР°РјР°
+	struct _finddata_t myfileinfo;
 	long done = _findfirst("*.cpp", &myfileinfo);
 	cout << myfileinfo.name;
-	return 0;*/
+	return 0;
 
-	//пошук першого файлу у папці, до якої вказано шлях
-	/*struct _finddata_t fileinfo;
+	//РїРѕС€СѓРє РїРµСЂС€РѕРіРѕ С„Р°Р№Р»Сѓ Сѓ РїР°РїС†С–, РґРѕ СЏРєРѕС— РІРєР°Р·Р°РЅРѕ С€Р»СЏС…
+	struct _finddata_t fileinfo;
 	char str[240] = "D:\\FileRead\\*.txt";
 	long done = _findfirst(str, &fileinfo);
 	cout << fileinfo.name;
-	return 0;*/
+	return 0;
 
-	//вивід на ектран всіх файліз з таким розширенням, яку знаходяться у папці за цим шляхом
+	//РІРёРІС–Рґ РЅР° РµРєС‚СЂР°РЅ РІСЃС–С… С„Р°Р№Р»С–Р· Р· С‚Р°РєРёРј СЂРѕР·С€РёСЂРµРЅРЅСЏРј, СЏРєСѓ Р·РЅР°С…РѕРґСЏС‚СЊСЃСЏ Сѓ РїР°РїС†С– Р·Р° С†РёРј С€Р»СЏС…РѕРј
 	struct _finddata_t fileinfo;
 	char str[200] = "D:\\FileRead\\*.txt";
 	long done = _findfirst(str, &fileinfo);
@@ -34,23 +34,23 @@ int main()
 	}
 	return 0;
 
-	//взаємодія із користувачем
-	/*struct _finddata_t fileinfo;
+	//РІР·Р°С”РјРѕРґС–СЏ С–Р· РєРѕСЂРёСЃС‚СѓРІР°С‡РµРј
+	struct _finddata_t fileinfo;
 	char path[300];
 	char mask[50];
 
-	// Запитаємо шлях
-	cout << "Введіть повний шлях (for example, D:):\n";
+	// Р—Р°РїРёС‚Р°С”РјРѕ С€Р»СЏС…
+	cout << "Р’РІРµРґС–С‚СЊ РїРѕРІРЅРёР№ С€Р»СЏС… (for example, D:):\n";
 	cin >> path;
-	// Запитаємо маску файлів
-	cout << "Введіть маску (for example, *.* or *.txt):";
+	// Р—Р°РїРёС‚Р°С”РјРѕ РјР°СЃРєСѓ С„Р°Р№Р»С–РІ
+	cout << "Р’РІРµРґС–С‚СЊ РјР°СЃРєСѓ (for example, *.* or *.txt):";
 	cin >> mask;
-	// З’єднаємо два рядки: шлях і маску
+	// Р—вЂ™С”РґРЅР°С”РјРѕ РґРІР° СЂСЏРґРєРё: С€Р»СЏС… С– РјР°СЃРєСѓ
 	strcat_s(path, mask);
 	long done = _findfirst(path, &fileinfo);
 	while (done != -1) {
 		cout << fileinfo.name << "\n";
 		done = _findnext(done, &fileinfo);
 	}
-	return 0;*/
+	return 0;
 }
