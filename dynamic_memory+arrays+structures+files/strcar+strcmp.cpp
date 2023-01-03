@@ -33,14 +33,14 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     //1) Написать собственный вариант функции strcat().
-    /*cout << "Task #1" << endl;
+    cout << "Task #1" << endl;
     char str1 [100], str2[50];
     cout << "Введіть перший рядок" << endl;
     cin.getline(str1, 100);
     cout << "Введіть другий рядок" << endl;
     cin.getline(str2, 50);
     Mystrcat(str1, str2);
-    cout << str1 << endl;*/
+    cout << str1 << endl;
 
     //2) Написать собственный вариант функции strcmp().
     /*Если строки идентичны (и по символам и по их количеству) – функция возвращает в программу число 0.
