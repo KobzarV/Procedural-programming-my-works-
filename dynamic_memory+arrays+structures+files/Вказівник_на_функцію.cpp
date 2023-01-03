@@ -3,15 +3,15 @@
 
 using namespace std;
 
-void ArrInit(int* arr, int size)  // функція ініціалізації масиву
+void ArrInit(int* arr, int size)  // С„СѓРЅРєС†С–СЏ С–РЅС–С†С–Р°Р»С–Р·Р°С†С–С— РјР°СЃРёРІСѓ
 {
     for (int i = 0; i < size; i++)
     {
-        *(arr + i) = -10 + rand() % 26;  // від -10 до 15
+        *(arr + i) = -10 + rand() % 26;  // РІС–Рґ -10 РґРѕ 15
     }
 }
 
-void ShowArr(int* arr, int size)  // функція виводу масиву на екран
+void ShowArr(int* arr, int size)  // С„СѓРЅРєС†С–СЏ РІРёРІРѕРґСѓ РјР°СЃРёРІСѓ РЅР° РµРєСЂР°РЅ
 {
     for (int i = 0; i < size; i++)
     {
@@ -20,27 +20,27 @@ void ShowArr(int* arr, int size)  // функція виводу масиву на екран
     cout << endl;
 }
 
-bool ascending(int a, int b)  // функція для сортування від більшого до меншого
+bool ascending(int a, int b)  // С„СѓРЅРєС†С–СЏ РґР»СЏ СЃРѕСЂС‚СѓРІР°РЅРЅСЏ РІС–Рґ Р±С–Р»СЊС€РѕРіРѕ РґРѕ РјРµРЅС€РѕРіРѕ
 {
-    return a > b;     // повертає «істину»,
-        // якщо перший елемент
-        // виявляється більшим другого
+    return a > b;     // РїРѕРІРµСЂС‚Р°С” В«С–СЃС‚РёРЅСѓВ»,
+        // СЏРєС‰Рѕ РїРµСЂС€РёР№ РµР»РµРјРµРЅС‚
+        // РІРёСЏРІР»СЏС”С‚СЊСЃСЏ Р±С–Р»СЊС€РёРј РґСЂСѓРіРѕРіРѕ
 }
 
-bool descending(int a, int b) // функція для сортування від меншого до більшого
+bool descending(int a, int b) // С„СѓРЅРєС†С–СЏ РґР»СЏ СЃРѕСЂС‚СѓРІР°РЅРЅСЏ РІС–Рґ РјРµРЅС€РѕРіРѕ РґРѕ Р±С–Р»СЊС€РѕРіРѕ
 {
     return a < b;
 }
 
-void BubbleSort(int* arr, int size, bool (*comparisonFcn)(int, int)) // бульбашкове сортування
+void BubbleSort(int* arr, int size, bool (*comparisonFcn)(int, int)) // Р±СѓР»СЊР±Р°С€РєРѕРІРµ СЃРѕСЂС‚СѓРІР°РЅРЅСЏ
 {
     int x = 0;
-    for (int i = size - 1; i > x; i--) // перебір починається з кінця масиву
+    for (int i = size - 1; i > x; i--) // РїРµСЂРµР±С–СЂ РїРѕС‡РёРЅР°С”С‚СЊСЃСЏ Р· РєС–РЅС†СЏ РјР°СЃРёРІСѓ
     {
         for (int j = size - 1; j > x; j--) {
-            if (comparisonFcn(arr[j], arr[j - 1]))  // порівняння
+            if (comparisonFcn(arr[j], arr[j - 1]))  // РїРѕСЂС–РІРЅСЏРЅРЅСЏ
             {
-                int temp = arr[j];   // тимчасова змінна для обміну значень
+                int temp = arr[j];   // С‚РёРјС‡Р°СЃРѕРІР° Р·РјС–РЅРЅР° РґР»СЏ РѕР±РјС–РЅСѓ Р·РЅР°С‡РµРЅСЊ
                 arr[j] = arr[j - 1];
                 arr[j - 1] = temp;
             }
@@ -51,17 +51,17 @@ void BubbleSort(int* arr, int size, bool (*comparisonFcn)(int, int)) // бульбашк
 
 void SelectionSort(int* array, int size, bool (*comparisonFcn)(int, int))
 {
-    for (int startIndex = 0; startIndex < size; ++startIndex) // Перебираем каждый элемент массива
-    { // smallestIndex - це індекс найменшого елемента,
-      // який ми знайшли до цього масиву
+    for (int startIndex = 0; startIndex < size; ++startIndex) // РџРµСЂРµР±РёСЂР°РµРј РєР°Р¶РґС‹Р№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР°
+    { // smallestIndex - С†Рµ С–РЅРґРµРєСЃ РЅР°Р№РјРµРЅС€РѕРіРѕ РµР»РµРјРµРЅС‚Р°,
+      // СЏРєРёР№ РјРё Р·РЅР°Р№С€Р»Рё РґРѕ С†СЊРѕРіРѕ РјР°СЃРёРІСѓ
         int smallestIndex = startIndex;
-        // Шукаємо найменший елемент серед тих, що залишились в масиві (почнемо із startIndex+1)
+        // РЁСѓРєР°С”РјРѕ РЅР°Р№РјРµРЅС€РёР№ РµР»РµРјРµРЅС‚ СЃРµСЂРµРґ С‚РёС…, С‰Рѕ Р·Р°Р»РёС€РёР»РёСЃСЊ РІ РјР°СЃРёРІС– (РїРѕС‡РЅРµРјРѕ С–Р· startIndex+1)
         for (int currentIndex = startIndex + 1; currentIndex < size; ++currentIndex)
         {
-            if (comparisonFcn(array[smallestIndex], array[currentIndex])) // ПОРІВНЯННЯ
+            if (comparisonFcn(array[smallestIndex], array[currentIndex])) //Р’РєР°Р·С–РІРЅРёРє РЅР° С„СѓРЅРєС†С–СЋ
                 smallestIndex = currentIndex;
         }
-        // Міняємо місцями наш початковий елемент з найденим найменшим елементом
+        // РњС–РЅСЏС”РјРѕ РјС–СЃС†СЏРјРё РЅР°С€ РїРѕС‡Р°С‚РєРѕРІРёР№ РµР»РµРјРµРЅС‚ Р· РЅР°Р№РґРµРЅРёРј РЅР°Р№РјРµРЅС€РёРј РµР»РµРјРµРЅС‚РѕРј
         swap(array[startIndex], array[smallestIndex]);
     }
 }
@@ -75,24 +75,24 @@ int main()
     int array[n], choise;
     srand(time(0));
     ArrInit(array, n);
-    cout << "Початковий масив" << endl;
+    cout << "РџРѕС‡Р°С‚РєРѕРІРёР№ РјР°СЃРёРІ" << endl;
     ShowArr(array, n);
-    cout << "\nВиберіть спосіб сортування :" << endl;
-    cout << "1) Від меншого до більшого\n2) Від більшого до меншого" << endl;
+    cout << "\nР’РёР±РµСЂС–С‚СЊ СЃРїРѕСЃС–Р± СЃРѕСЂС‚СѓРІР°РЅРЅСЏ :" << endl;
+    cout << "1) Р’С–Рґ РјРµРЅС€РѕРіРѕ РґРѕ Р±С–Р»СЊС€РѕРіРѕ\n2) Р’С–Рґ Р±С–Р»СЊС€РѕРіРѕ РґРѕ РјРµРЅС€РѕРіРѕ" << endl;
     cin >> choise;
-    switch (choise)  // вибір способу сортування
+    switch (choise)  // РІРёР±С–СЂ СЃРїРѕСЃРѕР±Сѓ СЃРѕСЂС‚СѓРІР°РЅРЅСЏ
     {
-    case 1:  // Від меншого до більшого
-        BubbleSort(array, n, descending);  // бульбашкове сортування
-        //SelectionSort(array, 8, descending);  // сортування вибором
+    case 1:  // Р’С–Рґ РјРµРЅС€РѕРіРѕ РґРѕ Р±С–Р»СЊС€РѕРіРѕ
+        BubbleSort(array, n, descending);  // Р±СѓР»СЊР±Р°С€РєРѕРІРµ СЃРѕСЂС‚СѓРІР°РЅРЅСЏ
+        //SelectionSort(array, 8, descending);  // СЃРѕСЂС‚СѓРІР°РЅРЅСЏ РІРёР±РѕСЂРѕРј
         break;
-    case 2:  // Від більшого до меншого
+    case 2:  // Р’С–Рґ Р±С–Р»СЊС€РѕРіРѕ РґРѕ РјРµРЅС€РѕРіРѕ
         BubbleSort(array, n, ascending);
         // SelectionSort(array, 8, descending);
         break;
     default:
-        cout << "Нічого не відбулося" << endl;
+        cout << "РќС–С‡РѕРіРѕ РЅРµ РІС–РґР±СѓР»РѕСЃСЏ" << endl;
     }
-    cout << "Відсортований масив" << endl;
-    ShowArr(array, n);   // выводим відсортований массив на экран
+    cout << "Р’С–РґСЃРѕСЂС‚РѕРІР°РЅРёР№ РјР°СЃРёРІ" << endl;
+    ShowArr(array, n);   // РІС‹РІРѕРґРёРј РІС–РґСЃРѕСЂС‚РѕРІР°РЅРёР№ РјР°СЃСЃРёРІ РЅР° СЌРєСЂР°РЅ
 }
